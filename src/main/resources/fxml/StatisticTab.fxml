@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="statisticTab" prefHeight="567.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.sepm.assignment.individual.fleet.ui.StatisticTabController">
+   <children>
+      <LineChart fx:id="LineChart" layoutX="4.0" layoutY="173.0" prefHeight="370.0" prefWidth="380.0" title="Income">
+        <xAxis>
+          <CategoryAxis fx:id="X_Axis_Line" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="Y_Axis_Line" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <RadioButton fx:id="LicenseA" layoutX="47.0" layoutY="62.0" mnemonicParsing="false" selected="true" text="License A" />
+      <RadioButton fx:id="LicenseB" layoutX="240.0" layoutY="62.0" mnemonicParsing="false" text="License B" />
+      <RadioButton fx:id="LicenseC" layoutX="446.0" layoutY="62.0" mnemonicParsing="false" text="License C" />
+      <RadioButton fx:id="NoLicense" layoutX="649.0" layoutY="62.0" mnemonicParsing="false" text="No License" />
+      <DatePicker fx:id="fromDate" layoutX="134.0" layoutY="18.0" prefHeight="27.0" prefWidth="155.0" />
+      <DatePicker fx:id="toDate" layoutX="586.0" layoutY="18.0" prefHeight="27.0" prefWidth="155.0" />
+      <Label layoutX="47.0" layoutY="23.0" text="From Date" />
+      <Label layoutX="498.0" layoutY="23.0" text="To Date" />
+      <BarChart fx:id="BarChart" layoutX="413.0" layoutY="173.0" prefHeight="370.0" prefWidth="380.0" title="Count">
+        <xAxis>
+          <CategoryAxis fx:id="X_Axis_Bar" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="Y_Axis_Bar" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

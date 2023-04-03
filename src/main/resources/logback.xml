@@ -1,0 +1,22 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{26} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <timestamp key = "day" datePattern="dd-MM-yyyy"/>
+    <appender name = "FILE" class="ch.qos.logback.core.FileAppender">
+        <file> sepm-${day}.log </file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread]  %-5level %logger{26} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <root level="debug">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

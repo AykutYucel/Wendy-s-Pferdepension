@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="addTab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.sepm.assignment.individual.fleet.ui.AddTabController">
+    <children>
+        <Label layoutX="81.0" layoutY="29.0" text="*Model" />
+        <Label layoutX="81.0" layoutY="65.0" text="*Construction Year" />
+        <Label layoutX="88.0" layoutY="104.0" text="Description" />
+        <Label layoutX="88.0" layoutY="142.0" text="Seating Capacity" />
+        <Label layoutX="88.0" layoutY="182.0" text="Mark" />
+        <Label layoutX="82.0" layoutY="252.0" text="*Engine Type" />
+        <Label layoutX="76.0" layoutY="285.0" text="**Engine Power" />
+        <Label layoutX="82.0" layoutY="321.0" text="*Price per hour" />
+        <Label layoutX="88.0" layoutY="358.0" text="Photo" />
+        <TextField fx:id="Model_TF" layoutX="289.0" layoutY="24.0" />
+        <TextField fx:id="ConstructionYear_TF" layoutX="289.0" layoutY="60.0" />
+        <TextField fx:id="Description_TF" layoutX="289.0" layoutY="99.0" />
+        <TextField fx:id="SeatingCapacity_TF" layoutX="289.0" layoutY="137.0" />
+        <RadioButton fx:id="LicenseA_RB" layoutX="289.0" layoutY="182.0" mnemonicParsing="false" text="License A" />
+        <RadioButton fx:id="LicenseB_RB" layoutX="406.0" layoutY="182.0" mnemonicParsing="false" text="License B" />
+        <RadioButton fx:id="LicenseC_RB" layoutX="529.0" layoutY="182.0" mnemonicParsing="false" text="License C" />
+        <TextField fx:id="Plate_TF" layoutX="289.0" layoutY="215.0" />
+        <RadioButton fx:id="Motorized_RB" layoutX="289.0" layoutY="252.0" mnemonicParsing="false" text="Motorized">
+            <toggleGroup>
+                <ToggleGroup fx:id="EngineType" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="Brawn_RB" layoutX="406.0" layoutY="252.0" mnemonicParsing="false" text="Brawn" toggleGroup="$EngineType" />
+        <TextField fx:id="EnginePower_TF" layoutX="289.0" layoutY="280.0" />
+        <TextField fx:id="Price_TF" layoutX="289.0" layoutY="316.0" />
+        <TextField fx:id="Photo_TF" layoutX="289.0" layoutY="353.0" />
+        <Button layoutX="482.0" layoutY="353.0" mnemonicParsing="false" onAction="#onSelectButtonClicked" prefHeight="27.0" prefWidth="131.0" text="Select Photo" />
+        <Button layoutX="556.0" layoutY="502.0" mnemonicParsing="false" onAction="#OnAddButtonClicked" prefHeight="27.0" prefWidth="131.0" text="Add" />
+        <Button layoutX="341.0" layoutY="502.0" mnemonicParsing="false" onAction="#OnCancelButtonClicked" prefHeight="27.0" prefWidth="131.0" text="Cancel" />
+      <Label layoutX="76.0" layoutY="220.0" text="**Plate" />
+      <Label layoutX="21.0" layoutY="507.0" text="* Mandatory" />
+      <Label layoutX="10.0" layoutY="529.0" text=" ** Dependent" />
+    </children>
+</AnchorPane>

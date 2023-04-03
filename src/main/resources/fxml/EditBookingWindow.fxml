@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.sepm.assignment.individual.fleet.ui.EditBookingWindowController">
+   <children>
+      <TableView fx:id="OldResult_TV" layoutY="38.0" prefHeight="362.0" prefWidth="156.0">
+         <columns>
+            <TableColumn fx:id="OldVehicleList_TC" prefWidth="77.0" text="Vehicle" />
+            <TableColumn fx:id="OldVehiclePriceList_TC" minWidth="4.0" prefWidth="78.0" text="Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="169.0" layoutY="25.0" text="Beginning Date" />
+      <Label layoutX="169.0" layoutY="63.0" text="Ending Date" />
+      <Label layoutX="169.0" layoutY="103.0" text="Customer Name" />
+      <TextField fx:id="Beginning_TF" editable="false" layoutX="301.0" layoutY="20.0" />
+      <TextField fx:id="Name_TF" layoutX="301.0" layoutY="98.0" />
+      <TextField fx:id="Ending_TF" editable="false" layoutX="301.0" layoutY="58.0" />
+      <TableView fx:id="NewResult_TV" layoutX="498.0" layoutY="38.0" prefHeight="362.0" prefWidth="302.0">
+         <columns>
+            <TableColumn fx:id="NewVehicleList_TC" prefWidth="70.0" text="Vehicle" />
+            <TableColumn fx:id="NewLicenseList_TC" prefWidth="67.0" text="License" />
+            <TableColumn fx:id="NewEngineList_TC" prefWidth="75.0" text="Engine" />
+            <TableColumn fx:id="NewVehiclePriceList_TC" minWidth="4.0" prefWidth="93.0" text="Price" />
+         </columns>
+      </TableView>
+      <Label layoutX="169.0" layoutY="143.0" text="Payment Info" />
+      <TextField fx:id="Payment_TF" layoutX="301.0" layoutY="138.0" />
+      <Button layoutX="354.0" layoutY="359.0" mnemonicParsing="false" onAction="#onEditButtonClicked" prefHeight="27.0" prefWidth="117.0" text="Edit" />
+      <Button layoutX="188.0" layoutY="359.0" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="27.0" prefWidth="117.0" text="Cancel" />
+      <Button fx:id="AddButton" disable="true" layoutX="354.0" layoutY="234.0" mnemonicParsing="false" onAction="#onAddButtonClicked" prefHeight="27.0" prefWidth="117.0" text="Add Vehicle" />
+      <Button fx:id="RemoveButton" disable="true" layoutX="188.0" layoutY="234.0" mnemonicParsing="false" onAction="#onRemoveButtonClicked" prefWidth="117.0" text="Remove Vehicle" />
+      <Label layoutX="27.0" layoutY="12.0" text="Booked Vehicles" />
+      <Label layoutX="585.0" layoutY="12.0" text="Available Vehicles" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="searchTab" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.sepm.assignment.individual.fleet.ui.SearchTabController">
+   <children>
+      <Button layoutX="644.0" layoutY="470.0" mnemonicParsing="false" onAction="#onCancelButtonClicked" prefHeight="27.0" prefWidth="100.0" text="Cancel" />
+      <TableView fx:id="Result_TV" prefHeight="439.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="Model_TC" prefWidth="119.0" text="Model" />
+          <TableColumn fx:id="License_TC" prefWidth="97.0" text="License" />
+            <TableColumn fx:id="Engine_TC" prefWidth="119.0" text="Engine" />
+            <TableColumn fx:id="Price_TC" prefWidth="118.0" text="Price" />
+        </columns>
+      </TableView>
+      <TextField fx:id="MinPrice_TF" layoutX="623.0" layoutY="61.0" prefHeight="27.0" prefWidth="111.0" />
+      <TextField fx:id="MaxPrice_TF" layoutX="623.0" layoutY="102.0" prefHeight="27.0" prefWidth="111.0" />
+      <DatePicker fx:id="Beginning_DP" layoutX="623.0" layoutY="149.0" prefHeight="27.0" prefWidth="111.0" />
+      <DatePicker fx:id="Ending_DP" layoutX="623.0" layoutY="235.0" prefHeight="27.0" prefWidth="111.0" />
+      <TextField fx:id="Model_TF" layoutX="623.0" layoutY="316.0" prefHeight="27.0" prefWidth="111.0" />
+      <TextField fx:id="SeatingCapacity_TF" layoutX="623.0" layoutY="404.0" prefHeight="27.0" prefWidth="111.0" />
+      <Label layoutX="513.0" layoutY="26.0" text="License" />
+      <Label layoutX="513.0" layoutY="66.0" text="Min Price" />
+      <Label layoutX="513.0" layoutY="107.0" text="Max Price" />
+      <Label layoutX="513.0" layoutY="154.0" text="Beginning Date" />
+      <Label layoutX="513.0" layoutY="240.0" text="Ending Date" />
+      <Label layoutX="513.0" layoutY="321.0" text="Model" />
+      <Label layoutX="513.0" layoutY="362.0" text="Engine Type" />
+      <Label layoutX="513.0" layoutY="409.0" text="Seating Capacity" />
+      <ChoiceBox fx:id="LicenseMenu_CB" layoutX="623.0" layoutY="21.0" prefHeight="27.0" prefWidth="111.0" />
+      <ChoiceBox fx:id="EngineType_CB" layoutX="623.0" layoutY="357.0" prefHeight="27.0" prefWidth="111.0" />
+      <Button fx:id="BookButton" disable="true" layoutX="493.0" layoutY="470.0" mnemonicParsing="false" onAction="#onBookButtonClicked" prefHeight="27.0" prefWidth="100.0" text="Book" />
+       <Button fx:id="DeleteButton" disable="true" layoutX="177.0" layoutY="470.0" mnemonicParsing="false" onAction="#onDeleteButtonClicked" prefHeight="27.0" prefWidth="100.0" text="Delete" />
+       <Button fx:id="EditButton" disable="true" layoutX="53.0" layoutY="470.0" mnemonicParsing="false" onAction="#onEditButtonClicked" prefHeight="27.0" prefWidth="100.0" text="Edit" />
+       <Button fx:id="ViewDetailsButton" disable="true" layoutX="322.0" layoutY="470.0" mnemonicParsing="false" onAction="#onViewDetailsButtonClicked" prefHeight="27.0" prefWidth="100.0" text="View Details" />
+      <Label layoutX="513.0" layoutY="193.0" text="Beninning Hour" />
+      <Label layoutX="513.0" layoutY="284.0" text="Ending Hour" />
+      <ChoiceBox fx:id="Beginning_CB" layoutX="623.0" layoutY="188.0" prefHeight="27.0" prefWidth="111.0" />
+      <ChoiceBox fx:id="Ending_CB" layoutX="623.0" layoutY="279.0" prefHeight="27.0" prefWidth="111.0" />
+   </children>
+</AnchorPane>

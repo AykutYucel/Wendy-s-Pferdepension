@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.ac.tuwien.sepm.assignment.individual.fleet.ui.MainController">
+    <children>
+        <TabPane prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Add Vehicle">
+                    <content>
+                        <fx:include fx:id="addTab" source="AddTab.fxml" />
+                    </content></Tab>
+                <Tab onSelectionChanged="#onSearchVehicleTabClicked" text="Search Vehicle">
+                    <content>
+                        <fx:include fx:id="searchTab" source="SearchTab.fxml" />
+                    </content></Tab>
+                <Tab onSelectionChanged="#onBookingAndInvoiceTabClicked" text="Booking and Invoice">
+                    <content>
+                        <fx:include fx:id="bookingAndInvoiceTab" source="BookingAndInvoiceTab.fxml" />
+                    </content></Tab>
+                <Tab text="Statistic">
+                    <content>
+                        <fx:include fx:id="statisticTab" source="StatisticTab.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
